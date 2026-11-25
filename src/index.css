@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Chakra Petch", "IBM Plex Sans", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-obsidian: #070A0F;
+  --color-panel: #0E131E;
+  --color-border: #1E293B;
+  --color-irq: #F43F5E;
+  --color-ctrl: #F59E0B;
+  --color-addr: #38BDF8;
+  --color-data: #10B981;
+  --color-os: #A78BFA;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background-color: #070A0F;
+    font-family: var(--font-sans);
+  }
+}
+
+.benchtop-mat {
+  background-color: #070A0F;
+  background-image:
+    radial-gradient(ellipse 65% 55% at 50% 42%, rgba(56, 189, 248, 0.065), transparent 72%),
+    radial-gradient(ellipse 40% 40% at 15% 22%, rgba(245, 158, 11, 0.04), transparent 70%),
+    radial-gradient(ellipse 45% 45% at 86% 68%, rgba(167, 139, 250, 0.05), transparent 72%),
+    radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.08) 1px, transparent 0),
+    linear-gradient(to right, rgba(30, 41, 59, 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.22) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 18px 18px, 72px 72px, 72px 72px;
+}
+
+.ic-package {
+  background: linear-gradient(155deg, #161E2E 0%, #0B1019 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.7),
+    0 18px 40px -14px rgba(0, 0, 0, 0.85);
+}
+
+.memory-module {
+  background: linear-gradient(180deg, rgba(11, 16, 26, 0.96) 0%, rgba(7, 10, 16, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(56, 189, 248, 0.08),
+    0 10px 26px -10px rgba(0, 0, 0, 0.8);
+}
+
+.hw-card {
+  background: linear-gradient(180deg, rgba(18, 25, 39, 0.95) 0%, rgba(12, 17, 27, 0.96) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 12px 32px -12px rgba(0, 0, 0, 0.78);
+}
+
+.crt-screen {
+  background-color: #05080D;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.018) 0px,
+    rgba(255, 255, 255, 0.018) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  box-shadow:
+    inset 0 2px 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(56, 189, 248, 0.1);
+}
+
+.telemetry-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.telemetry-scroll::-webkit-scrollbar-track {
+  background: #070A0F;
+}
+
+.telemetry-scroll::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+
+.telemetry-scroll::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+.glow-irq {
+  box-shadow: 0 0 18px rgba(244, 63, 94, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.glow-ctrl {
+  box-shadow: 0 0 18px rgba(245, 158, 11, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.glow-addr {
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.glow-data {
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.glow-os {
+  box-shadow: 0 0 18px rgba(167, 139, 250, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+  }
+}
